@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <span style="margin-right: 3%; margin-left: 1%"
+        ><img src="https://i.pinimg.com/736x/2c/1d/86/2c1d862b192eec296fcb2a3fd7fe820b.jpg" style="height: 40px"
+      /></span>
+      <div class="navlinks">
+        <ng-container *ngFor="let rout of routes">
+          <a mat-list-item [href]="rout.path">{{ rout.name }}</a>
+        </ng-container>
+      </div>
+
+     
+      <a mat-list-item> user name </a>
+      <a mat-list-item
+        ><button  mat-raised-button>Sign Out</button></a>
+    </mat-toolbar>
+    <ng-content></ng-content>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
