@@ -1,1 +1,96 @@
-<p>demande works!</p>
+<h2 >List des demandes de credit</h2>
+<div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Ref</th>
+    <th scope="col">Libelle</th>
+    <th scope="col">Statut</th>
+    <th scope="col">dateCeation</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of demandesCredits; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ element.libelle  }}</td>
+    <td>
+      <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+      <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+    </td>
+    <td>{{ element.dateCeation | date }}</td>
+    <td>
+      <button type="button" class="btn btn-success" (click)="ValiderDemandeC(element)">Valider</button>
+      <button type="button" class="btn btn-danger" (click)="refuserDemandeC(element)">Refuser</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div>
+  <h2 >List des demandes de Création de compte </h2>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Ref</th>
+      <th scope="col">Libelle</th>
+      <th scope="col">Statut</th>
+      <th scope="col">dateCeation</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let element of demandesCreationCompte; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ element.libelle  }}</td>
+      <td>
+        <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+        <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+      </td>
+      <td>{{ element.dateCeation | date }}</td>
+      <td>
+        <button type="button" class="btn btn-success" (click)="ValiderDemandeCC(element)">Valider</button>
+        <button type="button" class="btn btn-danger" (click)="refuserDemandeCC(element)">Refuser</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div>
+    <h2 >List des demandes de Chequier </h2>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Ref</th>
+        <th scope="col">Libelle</th>
+        <th scope="col">Statut</th>
+        <th scope="col">dateCeation</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let element of demandeChequier; index as i">
+        <th scope="row">{{  element.reference }}</th>
+        <td>{{ element.libelle  }}</td>    
+        <td>
+          <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+          <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+        </td>
+        <td>{{ element.dateCeation | date }}</td>
+        
+        <td>
+          <button type="button" class="btn btn-success" (click)="ValiderDemandeCh(element)">Valider</button>
+          <button type="button" class="btn btn-danger" (click)="refuserDemandeCh(element)">Refuser</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+
