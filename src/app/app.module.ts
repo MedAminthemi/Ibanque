@@ -15,16 +15,21 @@ import { DemandeComponent } from './demande/demande.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CreationDemandeComponent } from './creation-demande/creation-demande.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    DemandeComponent
+    DemandeComponent,
+    CreationDemandeComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,

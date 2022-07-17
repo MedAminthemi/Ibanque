@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontibanque';
-  routes = [{name:"demande",path:'demande'}];
+  routes = [{name:"demande",path:'demande'},{name:"Creation demande",path:'creation-demande'}];
 }

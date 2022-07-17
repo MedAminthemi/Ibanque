@@ -1,0 +1,27 @@
+<h1>creation-demande works!</h1>
+
+<form [formGroup]="adddemande"  (ngSubmit)="collectDemande()" >
+<div class="container">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      
+            <textarea formControlName="description" id="description"  class="form-control" aria-label="With textarea" [ngClass]="{ 'is-invalid': submitted && adddemande['description'].errors }" ></textarea>
+
+            <div class="text-danger" *ngIf="adddemande.controls['description'].hasError('required') && adddemande.controls['description'].touched " >
+                Please enter a title !
+             </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+
+
+<div class="text-center mt-4">
+<button type="submit" class="btn-danger" [disabled]="!adddemande.valid">Submit check</button>
+</div>
+</form>
+
+
+
+
