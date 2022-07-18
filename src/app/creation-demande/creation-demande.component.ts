@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DemandeServiceService } from '../service/demande-service.service';
 
 
 @Component({
@@ -10,19 +12,45 @@ import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
 export class CreationDemandeComponent implements OnInit {
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private demandeService : DemandeServiceService , private router: Router) { }
 
   adddemande = this.formBuilder.group({   
-    description: ['', [Validators.required]]
+    libelle: ['', [Validators.required]],
+    dateCeation:[],
+    statut:[]
     }); 
     submitted = false ;
+    radio=1 ;
   ngOnInit(): void {
   }
 
   collectDemande() {
 
+    console.log(this.radio);
     
-      alert("aaa"+this.adddemande.valid);
+    if(this.radio == 2 ){ 
+      this.adddemande.value['dateCeation'] = new Date() ;
+    this.adddemande.value['statut'] = 'E';
+
+   
+    this.demandeService.saveDemandeC(this.adddemande.value).subscribe((data) => {
+      console.log(data);
+    });
+    this.adddemande.reset();
+    this.router.navigate(['/demande']);
+  }
+
+  if(this.radio == 1 ){ 
+    this.adddemande.value['dateCeation'] = new Date() ;
+  this.adddemande.value['statut'] = 'E';
+
+ 
+  this.demandeService.saveDemandeCh(this.adddemande.value).subscribe((data) => {
+    console.log(data);
+  });
+  this.adddemande.reset();
+  this.router.navigate(['/demande']);
+}
    
   }
 

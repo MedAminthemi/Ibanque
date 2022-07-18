@@ -33,7 +33,7 @@ export class DemandeServiceService {
   saveDemandeC(a:any){
    return this.http.post('http://localhost:8080/api/v1/demandeCredit',a) ;
   }
-  saveDemandeCh(a:Demande){
+  saveDemandeCh(a:any){
     return this.http.post('http://localhost:8080/api/v1/demandecheq',a);
   }
 }

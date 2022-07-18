@@ -1,15 +1,49 @@
-<h1>creation-demande works!</h1>
+<h2 style="text-align: center;" >Créer une nouvelle demande</h2>
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <div class="form-check" >
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" [value]="1"  [(ngModel)]="radio">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Demande Chequier
+            </label>
+          </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-check" >
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [value]="2" [(ngModel)]="radio">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Demande Credit
+            </label>
+          </div>
+        
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+  
+<br>
+<br>
+<br>
+<br>
+  
+ 
+
 
 <form [formGroup]="adddemande"  (ngSubmit)="collectDemande()" >
 <div class="container">
 <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-3">
+    <div class="col-md-6">
       
-            <textarea formControlName="description" id="description"  class="form-control" aria-label="With textarea" [ngClass]="{ 'is-invalid': submitted && adddemande['description'].errors }" ></textarea>
+            <textarea  style="height: 150px;" formControlName="libelle" id="libelle"  class="form-control" aria-label="With textarea" [ngClass]="{ 'is-invalid': submitted && adddemande['description'].errors }" ></textarea>
 
-            <div class="text-danger" *ngIf="adddemande.controls['description'].hasError('required') && adddemande.controls['description'].touched " >
-                Please enter a title !
+            <div class="text-danger" *ngIf="adddemande.controls['libelle'].hasError('required') && adddemande.controls['libelle'].touched " >
+                Entrer une description SVP !
              </div>
     </div>
     <div class="col-md-3"></div>
@@ -18,7 +52,7 @@
 
 
 <div class="text-center mt-4">
-<button type="submit" class="btn-danger" [disabled]="!adddemande.valid">Submit check</button>
+<button type="submit" class="btn-primary" [disabled]="!adddemande.valid">Envoyer demande </button>
 </div>
 </form>
 

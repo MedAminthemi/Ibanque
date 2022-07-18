@@ -17,6 +17,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CreationDemandeComponent } from './creation-demande/creation-demande.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -39,8 +40,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
