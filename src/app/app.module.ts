@@ -15,13 +15,15 @@ import { DemandeComponent } from './demande/demande.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { TransactionComponent } from './transaction/transaction.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    DemandeComponent
+    DemandeComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
