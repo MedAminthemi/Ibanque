@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRippleModule } from '@angular/material/core';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { MatRippleModule } from '@angular/material/core';
     AdminLayoutComponent,
     HomeComponent,
     DemandeListComponent,
-    DemandecreationComponent
+    DemandecreationComponent,
+    TransactionComponent
 
   ],
   providers: [],
