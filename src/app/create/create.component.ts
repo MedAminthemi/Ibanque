@@ -29,33 +29,35 @@ export class CreateComponent implements OnInit {
 
 gererCompte() {
   
-    
-    if(this.radio == 2 ){ 
-      this.addcompte.value['numCompte'] = 'N' ;
-      this.addcompte.value['cinUser'] = 'C';
-
+    console.log("ikram") ; 
+    if(this.radio == 1 ){ 
+     // this.addcompte.value['numCompte'] = 'N' ;
+     // this.addcompte.value['cinUser'] = 'C';
+  
+   console.log('data'+JSON.stringify(this.addcompte.value)) ; 
    
-    this.compteService.save_courant(this.addcompte.value).subscribe((data) => {
+    this.compteService.save_epargne(this.addcompte.value).subscribe((data) => {
       console.log(data);
+     // this.addcompte.reset();
+     // this.router.navigate(['/compte']);
+  
     });
-    this.addcompte.reset();
-    this.router.navigate(['/compte']);
+  
+  
   }
   
-  
-  
-  if(this.radio == 1 ){ 
-    this.addcompte.value['numCompte'] = 'N' ;
-  this.addcompte.value['numCompte'] = 'C';
-
+  if(this.radio == 2 ){ 
+   // this.addcompte.value['numCompte'] = 'N' ;
+ // this.addcompte.value['numCompte'] = 'C';
  
-  this.compteService.save_epargne(this.addcompte.value).subscribe((data) => {
+ 
+  this.compteService.save_courant(this.addcompte.value).subscribe((data) => {
     console.log(data);
+   // this.addcompte.reset();
+    //this.router.navigate(['/compte']);
+  
   });
-  this.addcompte.reset();
-  this.router.navigate(['/compte']);
-}
+} }
    
   }
 
-}

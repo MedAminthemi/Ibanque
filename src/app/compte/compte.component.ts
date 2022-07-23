@@ -21,12 +21,19 @@ class Compte
 export class CompteComponent implements OnInit {
 
   constructor( private compteService : CompteService , private router: Router) { }
-  courants:any=[]
+  courants:any=[] ; 
+  epargnes:any=[]
     ngOnInit(): void {
-      this.compteService.get_courant().subscribe((data) => {
+      this.compteService.get_courants().subscribe((data) => {
         console.log(data);
         this.courants = data;
+
+       
   }
+      ) ; 
+  this.compteService.get_epargnes().subscribe((data) => {
+    console.log(data);
+    this.epargnes = data;}
 
   
     ); 
