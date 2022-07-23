@@ -1,7 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -16,6 +16,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRippleModule } from '@angular/material/core';
+import { LoginComponent } from './login/login.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { TokenInterceptor } from './service/token-interceptor.service';
+import { UserService } from './service/user.service';
 
 @NgModule({
   imports: [
@@ -39,10 +43,16 @@ import { MatRippleModule } from '@angular/material/core';
     AdminLayoutComponent,
     HomeComponent,
     DemandeListComponent,
-    DemandecreationComponent
+    DemandecreationComponent,
+    LoginComponent,
+    ListUsersComponent
 
   ],
-  providers: [],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+}, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
