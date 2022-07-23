@@ -32,4 +32,35 @@ GetAllUsers(){
     .set('Content-Type','application/json') 
     }) ; 
 }
+
+create(User): Observable<User> {
+  console.log('service',User) ; 
+ return this.httpClient.post<User>('http://localhost:8080/api/auth/signup', User,{
+  headers:new HttpHeaders()
+  .set('Content-Type','application/json') 
+  })
+
+
+}
+
+
+  getOneUser(id:any): Observable<User> {
+    console.log('service',id) ; 
+   return this.httpClient.get<User>('http://localhost:8080/api/users/findbyusername/'+ id,{
+    headers:new HttpHeaders()
+    .set('Content-Type','application/json') 
+    })
+  
+
+}
+
+updateProfile(user:any): Observable<User> {
+  console.log('updating profile',user) ; 
+
+  return this.httpClient.post<User>('http://localhost:8080/api/users/save', User,{
+    headers:new HttpHeaders()
+    .set('Content-Type','application/json') 
+    })
+  
+}
 }

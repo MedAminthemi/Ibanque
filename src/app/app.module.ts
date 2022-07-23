@@ -21,6 +21,8 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import { TokenInterceptor } from './service/token-interceptor.service';
 import { UserService } from './service/user.service';
 import { AuthServiceService } from './service/auth-service.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   imports: [
@@ -46,7 +48,9 @@ import { AuthServiceService } from './service/auth-service.service';
     DemandeListComponent,
     DemandecreationComponent,
     LoginComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    SignUpComponent,
+    UserDetailsComponent
 
   ],
   providers: [  {

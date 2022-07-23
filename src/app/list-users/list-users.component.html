@@ -8,11 +8,14 @@
                 <thead class="text-warning">
                     <th>UserName</th>
                     <th>Email</th>
+                    <th>Role</th>
+
                 </thead>
                 <tbody>
                     <tr *ngFor="let user of users">
                         <td>{{user.username}}</td>
                         <td>{{user.email}}</td>
+                        <td>{{user.roles[0].name}} </td>
                     </tr>
                
                 </tbody>

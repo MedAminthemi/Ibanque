@@ -45,6 +45,8 @@ export class LoginComponent implements OnInit {
               console.log(data['token']);
               localStorage.setItem('isLoggedin', 'true');
               localStorage.setItem('token',data['token'] );
+              localStorage.setItem('username',this.credentials.username );
+
           //    this.router.navigateByUrl('/general/home') ;
 
             },

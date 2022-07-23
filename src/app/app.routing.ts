@@ -6,16 +6,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes =[
+  {
+    path: '/home',
+    redirectTo: 'home'
+  }, 
   {
     path: 'login',
     component: LoginComponent
   },
   {
-    path: '/home',
-    redirectTo: 'home'
-  }, {
+    path: 'Singup',
+    component: SignUpComponent
+  }, 
+  {
     path: '',
     component: AdminLayoutComponent,
     children: [{
