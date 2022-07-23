@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'app/models/user/User';
@@ -12,7 +13,8 @@ export class UserProfileComponent implements OnInit {
   role: string;
   submitted:boolean=false;
   result:any;
-  Myuser: User ; 
+  Myuser: User ;
+  u:any; 
 
  
   id : any; 
@@ -23,7 +25,6 @@ export class UserProfileComponent implements OnInit {
   myProfile= this.formBuilder.group({
     id:[],
     email:  ['' ],
-    role :[''],
     username: [''],
         });
 roles: any ; 
@@ -37,9 +38,8 @@ roles: any ;
       this.myProfile.setValue({
         id: this.Myuser.id,
         email:this.Myuser.email,
-        username:this.Myuser.username,
-        role:this.Myuser.roles[0].name
-      });
+        username:this.Myuser.username
+            });
       
 
     }); 
@@ -48,7 +48,17 @@ roles: any ;
 Update()
 {
 
-  this.loginservice.updateProfile(this.myProfile.value).subscribe((res)=>{
+  //this.u = new User(this.myProfile.value['id'] , this.myProfile.value['username']  ,this.myProfile.value['email']    )
+  this.u = new User() ; 
+  this.u.id = this.myProfile.value['id'] ; 
+  this.u.username=this.myProfile.value['username'] ; 
+  this.u.email=this.myProfile.value['email'] ;
+
+  console.log('uuu'+this.u);
+this.u = JSON.stringify(this.u) ; 
+console.log('uuu'+this.u);
+
+  this.loginservice.updateProfile(this.u).subscribe((res)=>{
     alert('Update profile is done');
   });
   

@@ -66,7 +66,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'demande-list',        component: DemandeListComponent },
     { path: 'demande-creation',        component: DemandecreationComponent },
-    { path: 'Listusers',        component: ListUsersComponent }
+    { path: 'Listusers',        component: ListUsersComponent },
+  
 
 
   

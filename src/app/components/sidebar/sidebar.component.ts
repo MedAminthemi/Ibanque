@@ -17,6 +17,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/demande-list', title: 'List Demande',  icon:'filter_list', class: '' },
     { path: '/demande-creation', title: 'Creation Demande',  icon:'add_circle', class: '' },
     { path: '/Listusers', title: 'Liste des utilisateurs',  icon:'filter_list', class: '' },
+    { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
 
     
     /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },

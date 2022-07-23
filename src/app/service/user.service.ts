@@ -54,10 +54,10 @@ create(User): Observable<User> {
 
 }
 
-updateProfile(user:any): Observable<User> {
-  console.log('updating profile',user) ; 
+updateProfile(user:User): Observable<User> {
 
-  return this.httpClient.post<User>('http://localhost:8080/api/users/save', User,{
+  console.log('service '+user);
+  return this.httpClient.post<User>('http://localhost:8080/api/users/save', user,{
     headers:new HttpHeaders()
     .set('Content-Type','application/json') 
     })

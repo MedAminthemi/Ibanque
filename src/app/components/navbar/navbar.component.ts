@@ -122,4 +122,10 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+
+    deconnecter(){
+        localStorage.setItem('isLoggedin','false');
+        localStorage.clear();
+        window.location.href = "http://localhost:4200/#/login";
+    }
 }

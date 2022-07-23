@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'app/models/user/User';
 import { UserService } from 'app/service/user.service';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     stringObject: any;
     submitted : boolean =false ; 
 
-  constructor(private fb:FormBuilder, private loginService: UserService) { }
+  constructor(private fb:FormBuilder, private loginService: UserService ,private router: Router) { }
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['', Validators.compose([Validators.required, Validators.minLength(3),Validators.email])],
@@ -46,8 +46,7 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('isLoggedin', 'true');
               localStorage.setItem('token',data['token'] );
               localStorage.setItem('username',this.credentials.username );
-
-          //    this.router.navigateByUrl('/general/home') ;
+              this.router.navigate(['/']);
 
             },
             error => {
