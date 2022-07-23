@@ -18,6 +18,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { DemandecreationComponent } from 'app/demandecreation/demandecreation.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from 'app/service/token-interceptor.service';
+import { UserService } from 'app/service/user.service';
 
 @NgModule({
   imports: [
@@ -41,7 +44,12 @@ import { DemandecreationComponent } from 'app/demandecreation/demandecreation.co
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent
-  ]
+  ],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+}, UserService]
 })
 
 export class AdminLayoutModule {}
