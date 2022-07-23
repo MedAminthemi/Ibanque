@@ -47,8 +47,6 @@ roles: any ;
   }
 Update()
 {
-
-  //this.u = new User(this.myProfile.value['id'] , this.myProfile.value['username']  ,this.myProfile.value['email']    )
   this.u = new User() ; 
   this.u.id = this.myProfile.value['id'] ; 
   this.u.username=this.myProfile.value['username'] ; 

@@ -15,7 +15,7 @@
                     <tr *ngFor="let user of users">
                         <td>{{user.username}}</td>
                         <td>{{user.email}}</td>
-                        <td>{{user.roles[0].name}} </td>
+                        <td> <div *ngFor="let role of user.roles" >{{role.name}}</div></td>
                     </tr>
                
                 </tbody>

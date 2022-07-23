@@ -26,20 +26,26 @@ export class SignUpComponent implements OnInit {
 
   }
 
-    
-  
 
   Register()
   { this.submitted=true ;
     console.log('register') ; 
     const m = this.userForm.value ;
-    
-  if(this.userForm.value.password != this.userForm.value.plainPassword)
+    console.log(m) ; 
+    if(this.userForm.value.username=='' || this.userForm.value.email =='')
+    {
+      alert('add username and email');  }
+else {
+  if(this.userForm.value.password=='' || this.userForm.value.plainPassword =='')
+  {
+    alert('add passwords');  }
+    else {
+   if(this.userForm.value.password != this.userForm.value.plainPassword)
     {
   alert ('Please enter matching passwords') ; 
     }
-    
-    else 
+   
+  else
     {
     console.log('creation form :',m) ; 
 
@@ -54,7 +60,8 @@ export class SignUpComponent implements OnInit {
          error=>{console.log(error);
           alert('Please verify your inputs') ; 
           ;}
-    );}}
+    );}
+  }}}
     
     }
   

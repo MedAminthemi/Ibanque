@@ -43,7 +43,9 @@ export class DemandecreationComponent implements OnInit {
     console.log(data);
   });
   this.adddemande.reset();
-  this.router.navigate(['/demande-list']);
+  //this.router.navigate(['/demande-list']);
+  alert('demande enregistré avec succès') ; 
+  this.ngOnInit() ; 
 }
    
   }

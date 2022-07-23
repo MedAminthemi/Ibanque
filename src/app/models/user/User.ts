@@ -4,7 +4,7 @@ export class User
     username: string;
     email : string
     password : string ;
-   roles: any[] ; 
+   role: any; 
    
     constructor(id?:BigInteger ,username?:String ,email?:string , password?:string,roles?:any)
     { }

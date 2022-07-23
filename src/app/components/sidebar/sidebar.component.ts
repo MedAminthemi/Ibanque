@@ -7,21 +7,25 @@ declare interface RouteInfo {
     icon: string;
     class: string;
 }
-export const ROUTES: RouteInfo[] = [
-   /* { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },*/
+export const ROUT: RouteInfo[] = [
+
     { path: '/demande-list', title: 'List Demande',  icon:'filter_list', class: '' },
-    { path: '/demande-creation', title: 'Creation Demande',  icon:'add_circle', class: '' },
-    { path: '/Listusers', title: 'Liste des utilisateurs',  icon:'filter_list', class: '' },
     { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
+    { path: '/Listusers', title: 'Liste des utilisateurs',  icon:'filter_list', class: '' },
 
     
     /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
     { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },*/
+];
+
+export const ROUTES: RouteInfo[] = [
+
+  { path: '/demande-creation', title: 'Creation Demande',  icon:'add_circle', class: '' },
+  { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
+
+  
+  /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+  { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },*/
 ];
 
 @Component({
@@ -31,11 +35,17 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-
+  menu: any[];
+role: any; 
   constructor() { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    this.menu=  ROUT.filter(menuItem => menuItem);
+
+    this.role= localStorage.getItem('ROLE');
+
   }
   
 }
