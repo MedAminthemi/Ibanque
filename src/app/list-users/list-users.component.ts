@@ -24,7 +24,7 @@ export class ListUsersComponent implements OnInit {
     this.loginService.GetAllUsers().subscribe(
       data => { 
         console.log('dataa',data) ;
-        this.users =  data['hydra:member'] ;
+        this.users =  data;
         console.log(this.users);
      this.totalRows=this.users.length;
        } ,

@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         u.password=this.credentials.password;
         if(this.credentials.username=='' || this.credentials.password =='')
         {
-          alert('Please verify your email or your password');  
+          alert('add username and password');  
         }
         else {
           this.loginService.SignIn(u).subscribe(
@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('isLoggedin','false');
   
               alert('Please verify your email or your password');  
+              console.log(error) ; 
             });
       }
 

@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { TokenInterceptor } from './service/token-interceptor.service';
 import { UserService } from './service/user.service';
+import { AuthServiceService } from './service/auth-service.service';
 
 @NgModule({
   imports: [
@@ -52,7 +53,7 @@ import { UserService } from './service/user.service';
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-}, UserService],
+}, AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
