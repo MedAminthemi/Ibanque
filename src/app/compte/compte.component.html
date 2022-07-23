@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card">
+    <div class="card-header card-header-danger">
+        <h4 class="card-title">List OF Accounts</h4>
+
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="profile">
+                <!-- put table here -->
+                <table class="table">
+                  <thead class="text-danger">
+                    <th >TypeCompte</th>
+                    <th >NumCompte</th>
+                    <th>Solde</th>
+                    
+                    
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let element of courants; index as i" >
+                      <td>{{  element.numCompte }}</td>
+                      <td>{{ element.argent  }}</td>
+                      <td>
+                        <div *ngIf="(element.typeCompte=='V')"   style="color:green">{{ element.typeCompte  }}</div>
+                        <div *ngIf="(element.typeCompte=='R')"   style="color:red">{{ element.typeCompte  }}</div>
+                      </td>
+                      
+                      
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            
+            
+</div>
+    </div>
+</div>

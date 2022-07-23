@@ -10,6 +10,9 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { DemandeListComponent } from 'app/demande-list/demande-list.component';
 import { DemandecreationComponent } from 'app/demandecreation/demandecreation.component';
+import { CompteComponent } from 'app/compte/compte.component';
+import { CreateComponent  } from 'app/create/create.component';
+
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -64,5 +67,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'demande-list',        component: DemandeListComponent },
     { path: 'demande-creation',        component: DemandecreationComponent },
+    { path: 'compte',        component: CompteComponent },
+    { path: 'create',        component: CreateComponent },
 
 ];
