@@ -11,6 +11,7 @@ import { TransactionService } from 'app/service/transaction.service';
 export class CreateTransactionComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private transactionService : TransactionService, private router: Router) { }
+  
   addtransaction = this.formBuilder.group({   
     montantDebite: ['', [Validators.required]],
     montantCredite: ['', [Validators.required]],

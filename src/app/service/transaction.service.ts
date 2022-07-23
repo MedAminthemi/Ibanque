@@ -20,10 +20,10 @@ export class TransactionService {
   constructor(private http : HttpClient) { }
 
   getAllTransaction(){
-    return this.http.get('http://localhost:8080/api/v1/allTransaction');
+    return this.http.get('http://localhost:3306/api/v1/allTransaction');
   }
   saveTransaction(t:any){
-    return this.http.post('http://localhost:8080/api/v1/Transaction',t);
+    return this.http.post('http://localhost:3306/api/v1/Transaction',t);
 }
 
 
