@@ -1,0 +1,123 @@
+  <div class="card">
+    <div class="card-header card-header-tabs card-header-info">
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title"></span>
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="nav-item">
+                        <a mat-button class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons">receipt_long</i> Chequier
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a mat-button class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons">person</i> Creation compte
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a mat-button class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons">account_balance</i> Creadit
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="profile">
+                <!-- put table here -->
+                <table class="table">
+                  <thead class="text-danger">
+                    <th >Ref</th>
+                    <th >Libelle</th>
+                    <th >Statut</th>
+                    <th >dateCeation</th>
+                    <th >Actions</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let element of demandeChequier; index as i" >
+                      <td>{{  element.reference }}</td>
+                      <td>{{ element.libelle  }}</td>
+                      <td>
+                        <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+                        <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+                        <div *ngIf="(element.statut=='E')"   style="color:rgba(255, 162, 0, 0.492)">{{ element.statut  }}</div>
+                      </td>
+                      <td>{{ element.dateCeation | date }}</td>
+                      <td>
+                     
+                        <button mat-raised-button class="btn btn-success" (click)="ValiderDemandeCh(element)">Valider</button>
+                        <button mat-raised-button class="btn btn-danger" (click)="refuserDemandeCh(element)" >Refuser</button>
+          
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="messages">
+              <!-- put table here -->
+              <table class="table">
+                <thead class="text-danger">
+                  <th >Ref</th>
+                  <th >Libelle</th>
+                  <th >Statut</th>
+                  <th >dateCeation</th>
+                  <th >Actions</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let element of demandesCreationCompte; index as i" >
+                    <td>{{  element.reference }}</td>
+                    <td>{{ element.libelle  }}</td>
+                    <td>
+                      <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+                      <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+                      <div *ngIf="(element.statut=='E')"   style="color:rgba(255, 162, 0, 0.492)">{{ element.statut  }}</div>
+                    </td>
+                    <td>{{ element.dateCeation | date }}</td>
+                    <td>
+                   
+                      <button mat-raised-button class="btn btn-success" (click)="ValiderDemandeCh(element)">Valider</button>
+                      <button mat-raised-button class="btn btn-danger" (click)="refuserDemandeCh(element)" >Refuser</button>
+        
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane" id="settings">
+                <!-- put table here -->
+                <table class="table">
+                  <thead class="text-danger">
+                    <th >Ref</th>
+                    <th >Libelle</th>
+                    <th >Statut</th>
+                    <th >dateCeation</th>
+                    <th >Actions</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let element of demandesCredits; index as i" >
+                      <td>{{  element.reference }}</td>
+                      <td>{{ element.libelle  }}</td>
+                      <td>
+                        <div *ngIf="(element.statut=='V')"   style="color:green">{{ element.statut  }}</div>
+                        <div *ngIf="(element.statut=='R')"   style="color:red">{{ element.statut  }}</div>
+                        <div *ngIf="(element.statut=='E')"   style="color:rgba(255, 162, 0, 0.492)">{{ element.statut  }}</div>
+                      </td>
+                      <td>{{ element.dateCeation | date }}</td>
+                      <td>
+                     
+                        <button mat-raised-button class="btn btn-success" (click)="ValiderDemandeCh(element)">Valider</button>
+                        <button mat-raised-button class="btn btn-danger" (click)="refuserDemandeCh(element)" >Refuser</button>
+          
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
