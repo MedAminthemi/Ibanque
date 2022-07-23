@@ -22,9 +22,11 @@ export class TransactionService {
   getAllTransaction(){
     return this.http.get('http://localhost:8080/api/v1/allTransaction');
   }
-  saveTransaction(t:Transaction){
+  saveTransaction(t:any){
     return this.http.post('http://localhost:8080/api/v1/Transaction',t);
-  }
+}
+
+
  // deleteTransaction(t:Transaction){
    // return this.http.delete('http://localhost:8080/api/v1//deleteTransaction',t);
  // }

@@ -1,0 +1,95 @@
+  <div class="card">
+    <div class="card-header card-header-info">
+        <h4 class="card-title">Veuillez choisir une opération</h4>
+    </div>
+    <div class="card-body">
+        <div class="form-check form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input"  type="radio" name="exampleRadios" id="exampleRadios2" value="option2" 
+                [value]="1"  [(ngModel)]="radio">
+                Virement
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+          </div>
+        
+          <div class="form-check form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input"  type="radio" name="exampleRadios" id="exampleRadios2" value="option2" 
+                [value]="2" [(ngModel)]="radio">
+                Versement
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+          </div> 
+
+          <div class="form-check form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input"   type="radio" name="exampleRadios" id="exampleRadios2" value="option2" 
+                [value]="3" [(ngModel)]="radio">
+                Retrait argent
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+          </div> 
+          <form [formGroup]="addtransaction"  (ngSubmit)="collectTransaction()" >
+            
+            <div class="col-md-6" *ngIf="radio==1" >
+                <mat-form-field class="example-full-width">
+                    
+                <label  class="form-check-label">Le montant à débiter</label>
+                  <input matInput type="number" formControlName="montantDebite" id="montantDebite" >
+            <br>
+            <br>
+                  <label  class="form-check-label">Le montant à crédité</label>
+                  <input matInput type="number" formControlName="montantCredite" id="montantCredite" >
+            <br>
+            <br>
+                  <label  class="form-check-label">La date de la transaction</label>
+                  <input matInput type="date" formControlName="dateTransaction" id="dateTransaction">
+                  
+                </mat-form-field>
+              
+              </div>
+              <div class="col-md-6" *ngIf="radio==2" >
+                <mat-form-field class="example-full-width">
+                    <label  class="form-check-label">Le montant à débiter</label>
+                    <input matInput type="number" formControlName="montantDebite" id="montantDebite" >
+                    <br>
+                    <br>
+                    <label  class="form-check-label">La date de la transaction</label>
+                    <input matInput type="date" formControlName="dateTransaction" id="dateTransaction">
+                    
+                   
+                </mat-form-field>
+                <div >
+                    <mat-form-field class="example-full-width">
+                      <input matInput type="text" formControlName="motif" id="motif" placeholder="Laisser une note ici" >
+                    </mat-form-field>
+                    
+             
+                  </div>
+              
+              </div>
+
+              <div class="col-md-6" *ngIf="radio==3" >
+                <mat-form-field class="example-full-width">
+                  <input matInput type="text" formControlName="motif" id="motif" placeholder="description" >
+                </mat-form-field>
+              
+              </div>
+
+            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Enregister Votre Opération</button>
+
+          </form>
+    
+    </div>
+</div>
+  
+
+
+
+

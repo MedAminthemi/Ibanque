@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { DemandeListComponent } from 'app/demande-list/demande-list.component';
 import { DemandecreationComponent } from 'app/demandecreation/demandecreation.component';
 import { TransactionComponent } from 'app/transaction/transaction.component';
+import { CreateTransactionComponent } from 'app/create-transaction/create-transaction.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -66,5 +67,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'demande-list',        component: DemandeListComponent },
     { path: 'demande-creation',        component: DemandecreationComponent },
     { path: 'transaction',        component: TransactionComponent },
+    { path: 'create-transaction',        component:  CreateTransactionComponent },
 
 ];
