@@ -1,17 +1,13 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
+
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { TransactionComponent } from './transaction/transaction.component';
 
-=======
-=======
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
->>>>>>> Ikram
+import { AuthServiceService } from './service/auth-service.service';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -26,17 +22,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRippleModule } from '@angular/material/core';
-<<<<<<< HEAD
->>>>>>> Amine
-=======
 import { LoginComponent } from './login/login.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { TokenInterceptor } from './service/token-interceptor.service';
 import { UserService } from './service/user.service';
-import { AuthServiceService } from './service/auth-service.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
->>>>>>> Ikram
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
   imports: [
@@ -57,35 +50,15 @@ import { UserDetailsComponent } from './user-details/user-details.component';
   ],
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    NavbarComponent,
-    DemandeComponent,
-    TransactionComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule
-=======
     AdminLayoutComponent,
     HomeComponent,
     DemandeListComponent,
     DemandecreationComponent,
+    TransactionComponent,  
     LoginComponent,
     ListUsersComponent,
     SignUpComponent,
     UserDetailsComponent
-
->>>>>>> Amine
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,
