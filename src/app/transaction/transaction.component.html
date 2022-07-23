@@ -29,20 +29,13 @@
                   </thead>
                   <tbody>
                     <tr *ngFor="let item of transactions; index as i" >
-                      <td>{{  item .reference }}</td>
-                      
-                      <td>
-                        <div *ngIf="(item .typeTransac=='Vir')"   style="color:green">{{ item .typeTransac  }}</div>
-                        <div *ngIf="(item .typeTransac=='ver')"   style="color:red">{{ item .typeTransac  }}</div>
-                        <div *ngIf="(item .typeTransac=='retr')"   style="color:rgba(255, 162, 0, 0.492)">{{ item .typeTransac  }}</div>
-                      </td>
+                      <td>{{  item .reference }}</td>         
                       <td>{{ item .dateTransaction | date }}</td>
-                      <td>
-                     
-                        <button mat-raised-button class="btn btn-success" (click)="ValiderTransaction(item )">Valider</button>
-                        <button mat-raised-button class="btn btn-danger" (click)="refuserTransaction(item )" >Refuser</button>
-          
-                      </td>
+                      <td>{{ item .montantCredite }}</td>
+                      <td>{{ item .montantDebite  }}</td>
+                      <td>{{ item .motif }}</td>
+                      
+                      
                     </tr>
                   </tbody>
                 </table>

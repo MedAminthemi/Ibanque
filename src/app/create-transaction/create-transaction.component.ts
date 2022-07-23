@@ -35,7 +35,7 @@ export class CreateTransactionComponent implements OnInit {
       console.log(data);
     });
     this.addtransaction.reset();
-    this.router.navigate(['/transaction']);
+alert("cration transaction OK");
   } 
   
   if(this.radio == 1 ){ 
@@ -45,7 +45,8 @@ export class CreateTransactionComponent implements OnInit {
     console.log(data);
   });
   this.addtransaction.reset();
-  this.router.navigate(['/transaction']);
+  alert("cration transaction OK");
+
 }
 
 if(this.radio == 3 ){ 
@@ -55,7 +56,7 @@ if(this.radio == 3 ){
   console.log(data);
 });
 this.addtransaction.reset();
-this.router.navigate(['/transaction']);
+alert("cration transaction OK");
 }
    
   }
