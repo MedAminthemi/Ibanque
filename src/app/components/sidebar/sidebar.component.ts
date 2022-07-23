@@ -12,6 +12,7 @@ export const ROUT: RouteInfo[] = [
     { path: '/demande-list', title: 'List Demande',  icon:'filter_list', class: '' },
     { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
     { path: '/Listusers', title: 'Liste des utilisateurs',  icon:'filter_list', class: '' },
+    { path: '/transaction', title: 'List Transaction',  icon:'filter_list', class: '' },
 
     
     /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
@@ -22,6 +23,8 @@ export const ROUTES: RouteInfo[] = [
 
   { path: '/demande-creation', title: 'Creation Demande',  icon:'add_circle', class: '' },
   { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
+  { path: '/create-transaction', title: 'Ajouter transaction',  icon:'add_circle', class: '' },
+
 
   
   /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },

@@ -4,8 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { TransactionComponent } from './transaction/transaction.component';
-
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthServiceService } from './service/auth-service.service';
 import { RouterModule } from '@angular/router';
@@ -29,6 +27,8 @@ import { UserService } from './service/user.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { TransactionComponent } from './transaction/transaction.component';
+import { CreateTransactionComponent } from './create-transaction/create-transaction.component';
 
 
 @NgModule({
@@ -58,7 +58,9 @@ import { BrowserModule } from '@angular/platform-browser';
     LoginComponent,
     ListUsersComponent,
     SignUpComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    TransactionComponent,
+    CreateTransactionComponent
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,

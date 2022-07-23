@@ -12,6 +12,8 @@ import { DemandeListComponent } from 'app/demande-list/demande-list.component';
 import { DemandecreationComponent } from 'app/demandecreation/demandecreation.component';
 import { LoginComponent } from 'app/login/login.component';
 import { ListUsersComponent } from 'app/list-users/list-users.component';
+import { TransactionComponent } from 'app/transaction/transaction.component';
+import { CreateTransactionComponent } from 'app/create-transaction/create-transaction.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
