@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header card-header-tabs card-header-info">
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title"></span>
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="nav-item">
+                        <a mat-button class="nav-link active" href="#transact" data-toggle="tab">
+                            <i class="material-icons">receipt_long</i> Transaction
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="transact">
+                <!-- put table here -->
+                <table class="table">
+                  <thead class="text-danger">
+                    <th >Ref</th>
+                    <th >Date Transaction</th>
+                    <th >Montant Débit</th>
+                    <th >Montant Crédit</th>
+                    <th >Description</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of transactions; index as i" >
+                      <td>{{  item .reference }}</td>         
+                      <td>{{ item .dateTransaction | date }}</td>
+                      <td>{{ item .montantCredite }}</td>
+                      <td>{{ item .montantDebite  }}</td>
+                      <td>{{ item .motif }}</td>
+                      
+                      
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+           
+    </div>
+</div>
