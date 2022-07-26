@@ -14,6 +14,9 @@ import { LoginComponent } from 'app/login/login.component';
 import { ListUsersComponent } from 'app/list-users/list-users.component';
 import { TransactionComponent } from 'app/transaction/transaction.component';
 import { CreateTransactionComponent } from 'app/create-transaction/create-transaction.component';
+import { CreationForumComponent } from 'app/creation-forum/creation-forum.component';
+import { ListForumsComponent } from 'app/list-forums/list-forums.component';
+import { ListMessagesComponent } from 'app/list-messages/list-messages.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -70,7 +73,12 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'demande-creation',        component: DemandecreationComponent },
     { path: 'Listusers',        component: ListUsersComponent },
     { path: 'transaction',        component: TransactionComponent },
-    { path: 'create-transaction',        component:  CreateTransactionComponent }
+    { path: 'create-transaction',        component:  CreateTransactionComponent },
+    { path: 'create-forum',        component:  CreationForumComponent },
+    { path: 'listForums',        component:  ListForumsComponent },
+    { path: 'listMessages',        component:  ListMessagesComponent }
+
+
   
 
 

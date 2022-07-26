@@ -29,6 +29,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { TransactionComponent } from './transaction/transaction.component';
 import { CreateTransactionComponent } from './create-transaction/create-transaction.component';
+import { CreationForumComponent } from './creation-forum/creation-forum.component';
+import { ListForumsComponent } from './list-forums/list-forums.component';
+import { ListMessagesComponent } from './list-messages/list-messages.component';
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { CreateTransactionComponent } from './create-transaction/create-transact
     SignUpComponent,
     UserDetailsComponent,
     TransactionComponent,
-    CreateTransactionComponent
+    CreateTransactionComponent,
+    CreationForumComponent,
+    ListForumsComponent,
+    ListMessagesComponent
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,
