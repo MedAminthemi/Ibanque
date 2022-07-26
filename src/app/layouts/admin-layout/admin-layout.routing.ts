@@ -18,6 +18,7 @@ import { CreationForumComponent } from 'app/creation-forum/creation-forum.compon
 import { ListForumsComponent } from 'app/list-forums/list-forums.component';
 import { ListMessagesComponent } from 'app/list-messages/list-messages.component';
 
+
 export const AdminLayoutRoutes: Routes = [
     // {
     //   path: '',
@@ -73,10 +74,12 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'demande-creation',        component: DemandecreationComponent },
     { path: 'Listusers',        component: ListUsersComponent },
     { path: 'transaction',        component: TransactionComponent },
+
     { path: 'create-transaction',        component:  CreateTransactionComponent },
     { path: 'create-forum',        component:  CreationForumComponent },
     { path: 'listForums',        component:  ListForumsComponent },
     { path: 'listMessages',        component:  ListMessagesComponent }
+
 
 
   
