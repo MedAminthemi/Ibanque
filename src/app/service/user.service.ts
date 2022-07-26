@@ -43,7 +43,6 @@ create(User): Observable<User> {
 
 }
 
-
   getOneUser(id:any): Observable<User> {
     console.log('service',id) ; 
    return this.httpClient.get<User>('http://localhost:8080/api/users/findbyusername/'+ id,{

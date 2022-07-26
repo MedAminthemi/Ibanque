@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Commencer une nouvelle discussion !</h4>
+                        <p class="card-category">S'engager dans un nouveau échange en un clic! </p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="addforum" #f="ngForm" class="contact-form" (ngSubmit)="collectForum()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Entrez votre sujet"  class="form-control" formControlName="sujet" >
+                                    </mat-form-field>
+                                </div>
+                                
+                            </div>
+                       
+                          
+            
+                             
+                          
+
+
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Commencez !</button>
+                            <div class="clearfix">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+    </div>
+  

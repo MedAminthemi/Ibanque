@@ -25,6 +25,9 @@ export const ROUTES: RouteInfo[] = [
   { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
   { path: '/create-transaction', title: 'Ajouter transaction',  icon:'add_circle', class: '' },
 
+  { path: '/listForums', title: 'Forum',  icon:'add_circle', class: '' },
+  
+
 
   
   /*{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
